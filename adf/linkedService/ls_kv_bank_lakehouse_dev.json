@@ -1,0 +1,10 @@
+{
+	"name": "ls_kv_bank_lakehouse_dev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-bank-lakehouse-dev-01.vault.azure.net/"
+		}
+	}
+}
