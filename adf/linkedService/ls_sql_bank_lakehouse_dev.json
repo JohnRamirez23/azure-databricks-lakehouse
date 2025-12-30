@@ -1,0 +1,23 @@
+{
+	"name": "ls_sql_bank_lakehouse_dev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqlsrvd-lakehouse-dev.database.windows.net",
+			"database": "sqldb-oltp-sales",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sqlsrv-lakehouse-dev",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kv_bank_lakehouse_dev",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sql-admin-password"
+			}
+		}
+	}
+}
