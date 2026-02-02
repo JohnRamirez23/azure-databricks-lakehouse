@@ -4,12 +4,12 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "sqlsrvd-lakehouse-dev.database.windows.net",
+			"server": "sqlsrv-lakehouse-dev.database.windows.net",
 			"database": "sqldb-oltp-sales",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "sqlsrv-lakehouse-dev",
+			"userName": "sqladminuser",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
