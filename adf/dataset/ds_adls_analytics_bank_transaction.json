@@ -1,0 +1,23 @@
+{
+	"name": "ds_adls_analytics_bank_transaction",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_bank_lakehouse_dev",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "adls/analytics"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "bank_transaction",
+				"fileSystem": "analytics"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "ds_adls_raw_bank_transaction",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_bank_lakehouse_dev",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "adls/raw"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "bank_transaction",
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
