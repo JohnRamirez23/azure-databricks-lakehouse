@@ -19,7 +19,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "bank_transaction/ingestion_date=@{dataset().p_ingestion_date}\n\n\n\n\n\n\n\n",
+					"value": "bank_transaction/ingestion_date=@{dataset().p_ingestion_date}",
 					"type": "Expression"
 				},
 				"fileSystem": "raw"
