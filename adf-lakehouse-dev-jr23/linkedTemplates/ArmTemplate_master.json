@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-lakehouse-dev-jr23"
+		},
+		"ls_adls_bank_lakehouse_dev_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stlakehousedevjr23.dfs.core.windows.net/"
+		},
+		"ls_kv_bank_lakehouse_dev_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv-bank-lakehouse-dev.vault.azure.net/"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlsrv-lakehouse-dev.database.windows.net"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqldb-oltp-sales"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladminuser"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-lakehouse-dev-jr23_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_adls_bank_lakehouse_dev_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_bank_lakehouse_dev_properties_typeProperties_url')]"
+					},
+					"ls_kv_bank_lakehouse_dev_properties_typeProperties_baseUrl": {
+						"value": "[parameters('ls_kv_bank_lakehouse_dev_properties_typeProperties_baseUrl')]"
+					},
+					"ls_sql_bank_lakehouse_dev_properties_typeProperties_server": {
+						"value": "[parameters('ls_sql_bank_lakehouse_dev_properties_typeProperties_server')]"
+					},
+					"ls_sql_bank_lakehouse_dev_properties_typeProperties_database": {
+						"value": "[parameters('ls_sql_bank_lakehouse_dev_properties_typeProperties_database')]"
+					},
+					"ls_sql_bank_lakehouse_dev_properties_typeProperties_userName": {
+						"value": "[parameters('ls_sql_bank_lakehouse_dev_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

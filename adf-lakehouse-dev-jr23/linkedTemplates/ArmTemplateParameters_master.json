@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-lakehouse-dev-jr23"
+		},
+		"ls_adls_bank_lakehouse_dev_properties_typeProperties_url": {
+			"value": "https://stlakehousedevjr23.dfs.core.windows.net/"
+		},
+		"ls_kv_bank_lakehouse_dev_properties_typeProperties_baseUrl": {
+			"value": "https://kv-bank-lakehouse-dev.vault.azure.net/"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_server": {
+			"value": "sqlsrv-lakehouse-dev.database.windows.net"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_database": {
+			"value": "sqldb-oltp-sales"
+		},
+		"ls_sql_bank_lakehouse_dev_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
