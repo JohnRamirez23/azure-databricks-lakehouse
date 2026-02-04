@@ -18,7 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "bank_transaction/@dataset().p_ingestion_date",
+				"folderPath": {
+					"value": "bank_transaction/@dataset().p_ingestion_date\n\n\n\n\n\n",
+					"type": "Expression"
+				},
 				"fileSystem": "raw"
 			},
 			"compressionCodec": "snappy"
