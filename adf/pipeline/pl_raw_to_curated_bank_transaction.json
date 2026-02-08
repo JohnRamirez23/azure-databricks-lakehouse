@@ -1,0 +1,9 @@
+{
+	"name": "pl_raw_to_curated_bank_transaction",
+	"properties": {
+		"folder": {
+			"name": "curated"
+		},
+		"annotations": []
+	}
+}
