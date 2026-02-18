@@ -5,11 +5,6 @@
 			"referenceName": "ls_adls_bank_lakehouse_dev",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"p_ingestion_date": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "adls/raw"
 		},
@@ -19,7 +14,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "bank_transaction/ingestion_date=@{dataset().p_ingestion_date}",
+					"value": "bank_transaction/",
 					"type": "Expression"
 				},
 				"fileSystem": "landing"
